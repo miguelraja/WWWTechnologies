@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <section>
+    <h2>Modal Example</h2>
+        <button id="openModal">Open Modal</button>
+    </section>
+
+    <div id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="modal-content">
+        <h2>Modal Title</h2>
+        <p>This is an accessible modal.</p>
+        <button id="closeModal">Close</button>
+    </div>
+    </div>
+
+    <section class="accordion">
+        <h2>Accordion Example</h2>
+        <button aria-expanded="false" aria-controls="acc1">Section 1</button>
+        <div id="acc1" hidden>
+            <p>Content for section 1</p>
+        </div>
+        <button aria-expanded="false" aria-controls="acc2">Section 2</button>
+        <div id="acc2" hidden>
+            <p>Content for section 2</p>
+        </div>
+    </section>
+
+    <section class="tabs">
+        <h2>Tabs Example</h2>
+        <div role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="panel1" id="tab1">Tab 1</button>
+            <button role="tab" aria-selected="false" aria-controls="panel2" id="tab2">Tab 2</button>
+        </div>
+        <div id="panel1" role="tabpanel" aria-labelledby="tab1">Content 1</div>
+        <div id="panel2" role="tabpanel" aria-labelledby="tab2" hidden>Content 2</div>
+    </section>
+
+    <button id="menuButton"
+            aria-haspopup="true"
+            aria-expanded="false">
+    Menu
+    </button>
+
+    <ul id="menu" hidden>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+
+</head>
+
+<body>
+    </body>
+</html>

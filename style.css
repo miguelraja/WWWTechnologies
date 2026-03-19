@@ -1,0 +1,52 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+button {
+    padding: 0.5em 1em;
+    margin: 0.2em;
+}
+
+section {
+    margin: 1em 0;
+}
+
+#modal { 
+    display: none; 
+    position: fixed; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background: rgba(0,0,0,0.6); 
+    justify-content:center; 
+    align-items:center; 
+}
+
+#modal[aria-hidden="false"] { 
+    display: flex; 
+}
+
+#modal-content { 
+    background: #fff; 
+    padding: 1em;
+    max-width: 400px; 
+    width: 90%; 
+}
+
+.accordion [hidden] { 
+    display: none; 
+}
+
+.accordion button { 
+    display: block; width: 100%; text-align: left; 
+}
+
+.tabs [role="tabpanel"][hidden] { 
+    display: none; 
+}
+
+.tabs [role="tab"] { 
+    cursor: pointer; 
+}
