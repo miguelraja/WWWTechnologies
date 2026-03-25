@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+:root {
+  --color-primary: #4f46e5;
+  --color-dark: #111827;
+  --color-light: #f9fafb;
+  --color-gray: #6b7280;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+
+  --radius: 12px;
+}
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+.navbar {
+  background: white;
+  padding: var(--space-md) 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.hero {
+  padding: var(--space-lg) 0;
+  text-align: center;
+  background: var(--color-light);
+}
+
+.btn {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hero {
+  padding: var(--space-lg) 0;
+  text-align: center;
+  background: var(--color-light);
+}
+
+.btn {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.features {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+}
+
+@media (min-width: 768px) {
+  .features {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.card {
+  padding: var(--space-lg);
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 6rem 0;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-dark: #f9fafb;
+    --color-light: #1f2937;
+  }
+
+  body {
+    background: #111827;
+    color: var(--color-dark);
+  }
+
+  .navbar {
+    background: #1f2937;
+  }
+
+  .card {
+    background: #1f2937;
+  }
+}
+
+.hero {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
