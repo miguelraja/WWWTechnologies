@@ -1,3 +1,2 @@
-Task8/node-express-api/.env
-Task7/ai-image-generator/.env
-Task10/ai-image-generator/.env
+/node_modules
+.env
